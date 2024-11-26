@@ -1,4 +1,4 @@
-require("dotenv").config();
+import ("dotenv").config();
 
 const { db } = require('@vercel/postgres');
 const {
