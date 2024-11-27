@@ -1,13 +1,9 @@
-import ("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const { db } = require('@vercel/postgres');
-const {
-  invoices,
-  customers,
-  revenue,
-  users,
-} = require('../src/app/lib/placeholder-data.js');
-const bcrypt = require('bcrypt');
+import { db } from '@vercel/postgres';
+import { invoices, customers, revenue, users } from '../src/app/lib/placeholder-data.js';
+import bcrypt from 'bcrypt';
 
 async function seedUsers(client) {
   try {
